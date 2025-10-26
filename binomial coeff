@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int fact_( int n){
+    int fact =1 ;
+    for(int i=1 ; i<=n ; i++){
+        fact *= i ;
+
+    }
+    return fact ;
+}
+int ncr(int n , int r){
+    int fact_n = fact_(n);
+    int fact_r = fact_(r);
+    int fact_nmr = fact_(n-r);
+
+    return fact_n / (fact_r*fact_nmr );
+
+}
+int main(){
+    int n , r ;
+    cout<< "Enter the number for n:";
+    cin>>n;
+    cout<< "Enter the number for r: ";
+    cin>>r;
+    cout<<ncr(n, r) ;
+    
+return 0;
+}
